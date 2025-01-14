@@ -33,7 +33,7 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml-jvm")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation(libs.logback)
-    implementation(libs.bundles.webjars)
+    runtimeOnly(libs.bundles.webjars)
 
     testImplementation("io.ktor:ktor-server-test-host-jvm")
     testImplementation(libs.kotlin.test.junit)

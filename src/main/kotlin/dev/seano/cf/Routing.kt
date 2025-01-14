@@ -27,7 +27,7 @@ fun Application.configureRouting() {
         staticResources("/", "static")
 
         get("/api") {
-            call.respondText { "Hello World" }
+            call.respondText { "🐈" }
         }
     }
 }

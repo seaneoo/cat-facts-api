@@ -3,6 +3,7 @@ kotlin = "2.1.0"
 kotlin-serialization = "2.1.0"
 ktor = "3.0.3"
 logback = "1.5.16"
+webjars-bootstrap = "5.3.3"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -12,3 +13,7 @@ ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 [libraries]
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+webjars-bootstrap = { module = "org.webjars:bootstrap", version.ref = "webjars-bootstrap" }
+
+[bundles]
+webjars = ["webjars-bootstrap"]

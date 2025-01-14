@@ -6,6 +6,7 @@ import io.ktor.server.http.content.*
 import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import io.ktor.server.webjars.*
 
 fun Application.configureRouting() {
     install(StatusPages) {
@@ -16,6 +17,10 @@ fun Application.configureRouting() {
         status(HttpStatusCode.NotFound) { call, status ->
             call.respondText(text = status.toString(), status = status)
         }
+    }
+
+    install(Webjars) {
+        path = "assets"
     }
 
     routing {
